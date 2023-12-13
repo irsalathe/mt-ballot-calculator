@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Trial Ballot Form</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Enter Scores from a Ballot</h1>
+    <div class="mb-3">
+      <label for="roundNumber" class="form-label">Round Number:</label>
+      <input type="number" class="form-control" id="roundNumber" name="roundNumber" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="judgesName" class="form-label">Judge's Name:</label>
+      <input type="text" class="form-control" id="judgesName" name="judgesName" required>
+    </div>
+    
+    <div class="row">
+      <!-- Prosecution Column -->
+      <div class="col-md-6">
+        <h2>Prosecution</h2>
+        <form action="/submit-ballot" method="post">
+          <!--P Opening-->
+          <div class="mb-3">
+            <label for="pOpeningName" class="form-label"><b>Opening Statement</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pOpeningName" name="pOpeningName" required>
+              <span class="input-group-text">Score:</span>
+              <input type="number" class="form-control" placeholder="Score" id="pOpeningScore" name="pOpeningScore" required>
+            </div>
+          </div>
+          <!--P Attorney #1-->
+          <div class "mb-3">
+            <label for="pA1" class="form-label"><b>Attorney #1</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Attorney Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pA1Name" name="pA1Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="pA1DX" name="pA1DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="pA1CX" name="pA1CX" required>
+            </div>
+          </div>
+          
+          <!--P Attorney #2-->
+          <div class "mb-3">
+            <label for="pA2" class="form-label"><b>Attorney #2</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Attorney Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pA2Name" name="pA2Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="pA2DX" name="pA2DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="pA2CX" name="pA2CX" required>
+            </div>
+          </div>
+
+          <!--P Attorney #3-->
+          <div class="mb-3">
+            <label for="pA3" class="form-label"><b>Attorney #3</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Attorney Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pA3Name" name="pA3Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="pA3DX" name="pA3DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="pA3CX" name="pA3CX" required>
+            </div>
+          </div>
+
+          <!--P Witness #1-->
+          <div class "mb-3">
+            <label for="pW1" class="form-label"><b>Witness #1</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Witness Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pW1Name" name="pW1Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="pW1DX" name="pW1DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="pW1CX" name="pW1CX" required>
+            </div>
+          </div>
+          <!--P Witness #2-->
+          <div class "mb-3">
+            <label for="pW2" class="form-label"><b>Witness #2</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Witness Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pW2Name" name="pW2Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="pW2DX" name="pW2DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="pW2CX" name="pW2CX" required>
+            </div>
+          </div>
+          <!--P Witness #3-->
+          <div class "mb-3">
+            <label for="pW3" class="form-label"><b>Witness #3</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Witness Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pW3Name" name="pW3Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="pW3DX" name="pW3DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="pW3CX" name="pW3CX" required>
+            </div>
+          </div>
+
+          <!--P Closing Statements-->
+          <div class="mb-3">
+            <label for="pClosingName" class="form-label"><b>Closing Statement</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="pClosingName" name="pClosingName" required>
+              <span class="input-group-text">Score:</span>
+              <input type="number" class="form-control" placeholder="Score" id="pClosingScore" name="pClosingScore" required>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      
+      <!-- Defense Column -->
+      <div class="col-md-6">
+        <h2>Defense</h2>
+        <form action="/submit-ballot" method="post">
+          <!--D Opening-->
+          <div class="mb-3">
+            <label for="dOpeningName" class="form-label"><b>Opening Statement</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dOpeningName" name="dOpeningName" required>
+              <span class="input-group-text">Score:</span>
+              <input type="number" class="form-control" placeholder="Score" id="dOpeningScore" name="dOpeningScore" required>
+            </div>
+          </div>
+          <!--P Attorney #1-->
+          <div class "mb-3">
+            <label for=dA1" class="form-label"><b>Attorney #1</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Attorney Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dA1Name" name="dA1Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="dA1DX" name="dA1DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="dA1CX" name="dA1CX" required>
+            </div>
+          </div>
+          
+          <!--D Attorney #2-->
+          <div class "mb-3">
+            <label for="dA2" class="form-label"><b>Attorney #2</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Attorney Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dA2Name" name="dA2Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="dA2DX" name="dA2DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="dA2CX" name="dA2CX" required>
+            </div>
+          </div>
+
+          <!--D Attorney #3-->
+          <div class="mb-3">
+            <label for="dA3" class="form-label"><b>Attorney #3</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Attorney Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dA3Name" name="dA3Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="dA3DX" name="dA3DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="dA3CX" name="dA3CX" required>
+            </div>
+          </div>
+
+          <!--D Witness #1-->
+          <div class "mb-3">
+            <label for="dW1" class="form-label"><b>Witness #1</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Witness Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dW1Name" name="dW1Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="dW1DX" name="dW1DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="dW1CX" name="dW1CX" required>
+            </div>
+          </div>
+          <!--D Witness #2-->
+          <div class "mb-3">
+            <label for="dW2" class="form-label"><b>Witness #2</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Witness Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dW2Name" name="dW2Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="dW2DX" name="dW2DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="dW2CX" name="dW2CX" required>
+            </div>
+          </div>
+          <!--D Witness #3-->
+          <div class "mb-3">
+            <label for="dW3" class="form-label"><b>Witness #3</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Witness Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dW3Name" name="dW3Name" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Direct Score:</span>
+              <input type="number" class="form-control" placeholder="Direct Score" id="dW3DX" name="dW3DX" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Cross Score:</span>
+              <input type="number" class="form-control" placeholder="Cross Score" id="dW3CX" name="dW3CX" required>
+            </div>
+          </div>
+
+          <!--D Closing Statements-->
+          <div class="mb-3">
+            <label for="dClosingName" class="form-label"><b>Closing Statement</b></label>
+            <div class="input-group">
+              <span class="input-group-text">Name:</span>
+              <input type="text" class="form-control" placeholder="Name" id="dClosingName" name="dClosingName" required>
+              <span class="input-group-text">Score:</span>
+              <input type="number" class="form-control" placeholder="Score" id="dClosingScore" name="dClosingScore" required>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Submit Ballot</button>
+    </div>
+  </div>
+  
+  <!-- Bootstrap Bundle with Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
